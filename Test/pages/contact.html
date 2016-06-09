@@ -1,0 +1,19 @@
+<div class="main">  
+  <div class="form">
+    <form novalidate name="contactForm" ng-controller="contactController" ng-submit="contactForm.$valid && sendInfo()">
+      <div class="left_form">
+      	<p class="address1">Please fill up the following details and we will get back to you.</p>
+        <input type="text" placeholder="Name*" name="name" class="input" ng-model="contactInfo.name" required>        
+        <input type="email" placeholder="Email*" name="email" class="input" ng-model="contactInfo.email" required>
+        <input type="text" placeholder="Telephone No.*" name="tel" class="input" ng-model="contactInfo.phone" required>
+        <p class="tel">Enter telephone number. Add +XX for international numbers</p>
+      </div>      
+      <div class="right_form">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.0152193504864!2d76.64408231530865!3d12.314761832280583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf707497ed064d%3A0x54735f8227721819!2sWiredelta!5e0!3m2!1sen!2sin!4v1465303156442" width="400" height="400" frameborder="0" style="border:0" allowfullscreen class="textarea"></iframe>
+      </div>
+      <div class="submit">
+        <input type="submit" value="SUBMIT" name="submit" class="sub">
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+<meta charset="utf-8">
+<title>Test- Landing Page</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-route.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="main">
+      <div class="hlogo"><img class="logo" src="images/logo.png"></div>
+      <div class="menu" ng-controller="hdnavController">
+        <ul>
+          <li class="home"><a href="#/" ng-click="nav = '1';" ng-class="{act: nav == '1'}">HOME</a></li>
+          <li class="home nomobile"><a href="#/" ng-click="nav = '2';" ng-class="{act: nav == '2'}">MD#6</a></li>
+          <li class="abtman nomobile"><a href="#/" ng-click="nav = '3';" ng-class="{act: nav == '3'}">ABOUT MANUEL</a></li>
+          <li class="home nomobile"><a href="#/" ng-click="nav = '4';" ng-class="{act: nav == '4'}">SHOP</a></li>
+          <li class="home"><a href="#/contact" ng-click="nav = '5';" ng-class="{act: nav == '5'}">CONTACT</a></li>
+          <li class="home"><a href="#/volunteer" ng-click="nav = '6';" ng-class="{act: nav == '6'}">VOLUNTEER</a></li>
+        </ul>
+      </div>
+      <div class="social nomobile">
+        <div class="fb"> <a href="#"><img src="images/fblogo.jpg"></a> </div>
+        <div class="youtube"> <a href="#"><img src="images/youtubelog.jpg"></a> </div>
+        <div class="sperator"> <img src="images/seplog.jpg"> </div>
+        <div class="cart"> <a href="#"><img src="images/shopcart.jpg"></a> </div>
+      </div>
+    </div>
+  </div>
+  <div ng-view></div>
+  <div class="footer">
+    <p>Copyright © 2015 Manuel Dub - +39 347 0120755 - <span style="color:#ede22e;">info@manueldub.org</span></p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<div class="main">
+  <div class="content">
+    <h1>WELCOME TO MANUEL DUB<br>
+      FESTIVAL VOLUNTEERS</h1>
+    <p>Manuel Dub is a strictly not-for-profit event dedicated to the memory of Manuel. On the one hand, this has enabled us to host some of dub music’s finest artists who after feeling moved by the energy, dedication and love that goes into the event agree to perform for a  reduced fee or even free of charge. On the other hand it means that we are in constant need of  volunteers to make it happen and keep it going</p>
+  </div>
+  <div ng-controller="rotatorController">
+    <div class="banner" ng-switch on="pic" ng-animate=" 'animate' " id="rotator">
+      <div ng-switch-when="1"><img src="images/banner.jpg"></div>
+      <div ng-switch-when="2"><img src="images/banner1.jpg"></div>
+      <div ng-switch-when="3"><img src="images/banner2.jpg"></div>
+    </div>
+    <div class="ban_nav">
+      <button ng-click="pic = '1';" ng-class="{active: pic == '1'}" class="button"></button>
+      <button ng-click="pic = '2';" ng-class="{active: pic == '2'}" class="button"></button>
+      <button ng-click="pic = '3';" ng-class="{active: pic == '3'}" class="button"></button>
+    </div>
+  </div>  
+  <div class="video">
+    <p>Check the video below to get an impression of Manuel Dub vibe, and how<br>
+      much volunteer mean for us.</p>
+    <div class="videocenter">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/kDyJN7qQETA" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<div class="main">
+  <div class="inner_con main">
+    <p>You simply just have to choose the shift you want in our system. You are going to provide us with few personal details as well as professional background and skills but don’t worry, we only want to know how we can use your awesome skills to arrange the best edition of MD festival ever!!</p>
+    <p style="padding-top:0px;">So tell us a bit about yourself filling up the form below:</p>
+  </div>
+  <div class="form">
+    <form novalidate name="volunteerForm" ng-controller="volunteerController" ng-submit="volunteerForm.$valid && sendInfo()">
+      <div class="left_form">
+        <input type="text" placeholder="First Name*" name="fname" class="input" ng-model="volunteerInfo.fname" required>
+        <p class="address">Address</p>
+        <select class="select" ng-model="volunteerInfo.country" required>
+          <option value="" selected>Country*</option>
+          <option value="UK">UK</option>
+          <option value="US">US</option>
+          <option value="India">India</option>
+        </select>
+        <input type="text" placeholder="Street" name="street" class="input" ng-model="volunteerInfo.street">
+        <input type="text" placeholder="City*" name="city" class="input80" ng-model="volunteerInfo.city" required>
+        <input type="text" placeholder="Zip*" name="zip" class="input20" ng-model="volunteerInfo.zip" required>
+        <input type="email" placeholder="Email*" name="email" class="input" ng-model="volunteerInfo.email" required>
+      </div>
+      <div class="right_form">
+        <input type="text" placeholder="Last Name" name="lname" class="input" ng-model="volunteerInfo.lname">
+        <p class="address">Gender</p>
+        <div class="radio">
+          <input type="radio" value="Male" name="gender" ng-model="volunteerInfo.gender" required>
+          Male
+          <input type="radio" value="Female" name="gender" ng-model="volunteerInfo.gender" required>
+          Female </div>
+        <input type="text" placeholder="Telephone No." name="tel" class="input" ng-model="volunteerInfo.phone" required>
+        <p class="tel">Enter telephone number. Add +XX for international numbers</p>
+      </div>
+      <div class="left_form">
+        <p class="address1">Skills</p>
+        <div class="checkbox">
+          <input type="checkbox" value="" name="check" class="check" ng-model="volunteerInfo.certifiedPlumber">
+          <span style="padding-left:3%;">Certified Plumber</span><br>
+          <input type="checkbox" value="" name="check" class="check" ng-model="volunteerInfo.carpentryExperience">
+          <span style="padding-left:3%;">Carpentry Experience</span><br>
+          <input type="checkbox" value="" name="check" class="check" ng-model="volunteerInfo.certifiedElectrician">
+          <span style="padding-left:3%;">Certified Electrician</span><br>
+          <input type="checkbox" value="" name="check" class="check" ng-model="volunteerInfo.bartendingExperience">
+          <span style="padding-left:3%;">Bartending Experience</span><br>
+          <input type="checkbox" value="" name="check" class="check" ng-model="volunteerInfo.foodHygieneCertificate">
+          <span style="padding-left:3%;">Food Hygiene Certificate</span><br>
+          <input type="checkbox" value="" name="check" class="check" ng-model="volunteerInfo.firstAidCourse">
+          <span style="padding-left:3%;">First Aid Course</span><br>
+          <input type="checkbox" value="" name="check" class="check" ng-model="volunteerInfo.forkliftDriveCertificate">
+          <span style="padding-left:3%;">Forklift Drive Certificate</span><br>
+          <input type="checkbox" value="" name="check" class="check" ng-model="volunteerInfo.driverLicence">
+          <span style="padding-left:3%;">Driver’s Licence (Type B)</span>
+          <p class="tel" style="margin-left:0%;">Thick off the skills / prerequisite you have</p>
+        </div>
+      </div>
+      <div class="right_form">
+        <p class="address1">Comments and other relevant experience</p>
+        <textarea class="textarea" ng-model="volunteerInfo.address"></textarea>
+      </div>
+      <div class="submit">
+        <input type="submit" value="SUBMIT" name="submit" class="sub">
+      </div>
+    </form>
+  </div>
+</div>
